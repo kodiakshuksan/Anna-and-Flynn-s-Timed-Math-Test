@@ -2,6 +2,26 @@
 
 //Click start button to start timed test//
 //"start" button//
+//var question1 = a
+
+//<ol id="demo">
+  //  <h2>64/8 = ?</h2><br>
+    //<li>a. </li>
+ //   <li>b. </li>
+   // <li>c. 8</li>
+   // <li>d.</li>
+//</ol>
+
+
+
+
+//</ol><button type="button" onclick='document.getElementById("demo").innerHTML = "question1"'>!</button>
+
+
+
+
+
+
 
 //handler//
 //event Listener//
@@ -12,12 +32,12 @@
 
 //if start button is clicked then timer starts
 // Selects element by class
-var timeEl = document.querySelector(".time");
+//var timeEl = document.querySelector(".time");
 
 // Selects element by id
 //var mainEl = document.getElementById("main");
 
-var secondsLeft = 10;
+//var secondsLeft = 10;
 
 //function setTime() {
   // Sets interval in variable
@@ -34,31 +54,31 @@ var secondsLeft = 10;
 //}, 1000);
 //}
 
-function countdown() {
-    var timeLeft = 10;
+//function countdown() {
+   // var timeLeft = 10;
   
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-    var timeInterval = setInterval(function () {
+  //  var timeInterval = setInterval(function () {
       // As long as the `timeLeft` is greater than 1
-      if (timeLeft > 1) {
+    //  if (timeLeft > 1) {
         // Set the `textContent` of `timerEl` to show the remaining seconds
-        timerEl.textContent = timeLeft + ' seconds remaining';
+      //  timerEl.textContent = timeLeft + ' seconds remaining';
         // Decrement `timeLeft` by 1
-        timeLeft--;
-      } else if (timeLeft === 1) {
+        //timeLeft--;
+     // } else if (timeLeft === 1) {
         // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
-        timerEl.textContent = timeLeft + ' second remaining';
-        timeLeft--;
-      } else {
+       // timerEl.textContent = timeLeft + ' second remaining';
+        //timeLeft--;
+      //} else {
         // Once `timeLeft` gets to 0, set `timerEl` to an empty string
-        timerEl.textContent = '';
+       // timerEl.textContent = '';
         // Use `clearInterval()` to stop the timer
-        clearInterval(timeInterval);
+        //clearInterval(timeInterval);
         // Call the `displayMessage()` function
-        displayMessage();
-      }
-    }, 1000);
-  }
+        //displayMessage();
+      //}
+    //}, 1000);
+  //}
   
 // Function to create and append colorsplosion image
 //function sendMessage() {
@@ -67,19 +87,17 @@ function countdown() {
   //imgEl.setAttribute("src", "images/image_1.jpg");
   //mainEl.appendChild(imgEl);
 
-}
+//}
 
-setTime();
+//setTime();
 
 
-//If timer starts then Question #1 appears//
-//Question window.alert box?
+//If start button is clicked the timer will start and a division question will appear//
+//Where and how will question loop run
 //Question loop
 
-//Question #1 is submitted
-
-//When I answer/confirm question question #2 appears//
-//var questions
+//if userAnswer chooses a variable in the [array of right answers]
+//then var question++
 
 //var rightAnswer = [array of the right answers 
 //Question #1, c

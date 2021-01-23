@@ -12,9 +12,15 @@
   <h1>4th Grade Timed Division Test</h1>
 
   <!--button "Start!"-->
-  <div class="card-footer">
-  <button id="start" class="btn">Start!</button>
-  </div>
+    <div class="card-footer">
+    <!--button tpye="button" id="startButton" class="btn">Start!</button-->
+    
+    
+    <button type="button" class="btn" onclick='document.getElementById("questionBox").innerHTML = "question1"'>start!</button>
+    
+    <!--p id="questionBox"></p>
+
+    </div-->
 
   <!--Timer-->
   <div>
@@ -28,19 +34,35 @@
 <body>
     <div class="wrapper">
           <div class="card">
-            <div class="card-header" style="text-align:center">Questions</div>
-            <div class="card-body">           
+            <div id="questionBox" class="card-header" style="text-align:center"></div>
+            <div class="card-body"> 
+                      
+             <!--ol id="question1">
+              <h2>64/8 = ?</h2><br>
+                <li>a. </li>
+                <li>b. </li>
+                <li>c. 8</li>
+                <li>d.</li>
+              </ol>
+
+             <ol id="question2">
+              <h2>7/7 = ?</h2><br>
+                 <li>a. 1</li>
+                <li> b.</li>
+                <li> c.</li>
+                 <li>d.</li>
+             </ol>
+
+
+
+
+
+             </ol>
+
+              
+              
     
-
-    <!--Question #1
-        64/8 =
-
-        a.
-        b.
-        c. 8
-        d.
-    -->
-    <!--Question #2
+    idQuestion #2
         7/7 =
 
         a. 1
@@ -114,15 +136,8 @@
         d.
     -->
 
-  <!--shows my score returns score using inner.text HTML then clicks to high score page>
-  <div>
-    <textarea
-    readonly
-    id="myscore"
-    placeholder="My Score"
-    aria-label="Enter My Score"
-  ></textarea>
-  </div>-->
+  <!--shows my score returns score using inner.text HTML then clicks to high score page-->
+  
   
   <!--returns text area showing top 5 scores play again button restarts test and timer-->
   <!--div>
@@ -134,6 +149,6 @@
       ><text area>
   </div>
 
-<script src="script.js"></script>
+<script src="script.js"></script-->
 </body>
 </html>
