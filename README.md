@@ -11,7 +11,8 @@ by Jennifer Detmering
 
 <img src="assets/MathTest.PNG" />
 
-## Technologies
+## Technologies 
+HTML, CSS, JavaScript
 
 
 ## Challenges
@@ -19,6 +20,7 @@ by Jennifer Detmering
 1/19/2021-Created the HTML, CSS, Javascript, and README files. 
 1/20/2021-Developing code quiz outline further by using comments. Started writing the code for this project.
 1/21/2021-developing the timer and start button
+1/29/2021-developing questions and buttons, have figured out the start button, and questions
 
 
 ## Contributors 

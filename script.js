@@ -2,7 +2,67 @@
 
 //Click start button to start timed test//
 //"start" button//
-//var question1 = a
+function openWin() {
+  window.open("http://127.0.0.1:5500/index1.html");
+};
+function openWin1() {
+  window.open("http://127.0.0.1:5500/index2.html");
+};
+
+
+
+
+
+
+//{ // element.addEventListener("click", myFunction);
+
+//<//form> function myFunction() { */}
+//{/* //   alert ("Hello World!");
+// }
+// function startNow() { */}
+///* //   var questionBoxZero= document.getElementById("questionBoxZero");
+//   console.log(questionBoxZero) */}
+
+
+
+//   element.addEventListener("click", myFunction);
+
+// function myFunction() {
+//   alert ("Hello World!");
+// }
+// };
+
+// var startNow = document.getElementById("startButton").onclick; 
+// console.log(startNow)
+
+//get value of buttons
+// var raquestionzero = document.getElementById("buttonC");
+// console.log(raquestionzero)
+
+// var raquestionone = document.getElementById("buttonF");
+// console.log(raquestionone) 
+
+
+//var rightAnswer0 = [questionzero, ]
+//var wrongAnswer = new Array(): might not need this 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //<ol id="demo">
   //  <h2>64/8 = ?</h2><br>
@@ -15,7 +75,6 @@
 
 
 
-//</ol><button type="button" onclick='document.getElementById("demo").innerHTML = "question1"'>!</button>
 
 
 
@@ -150,3 +209,6 @@
 
 //game resets and starts over//
 //if button is clicked then game resets and returns to starting screen
+
+
+
