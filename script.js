@@ -3,14 +3,39 @@
 //Click start button to start timed test//
 //"start" button//
 function openWin() {
-  window.open("http://127.0.0.1:5500/index1.html");
+  window.open("index1.html");
 };
 function openWin1() {
-  window.open("http://127.0.0.1:5500/index2.html");
+  window.open("index2.html");
 };
 
-
-
+function openWin2() {
+  window.open("index3.html");
+};
+function openWin3() {
+  window.open("index4.html");
+};
+function openWin4() {
+  window.open("index5.html");
+};
+function openWin5() {
+  window.open("index6.html");
+};
+function openWin6() {
+  window.open("index7.html");
+};
+function openWin7() {
+  window.open("index8.html");
+};
+function openWin8() {
+  window.open("index9.html");
+};
+function openWin9() {
+  window.open("index10.html");
+};
+function openWin10() {
+  window.open("index8.html");
+};
 
 
 
