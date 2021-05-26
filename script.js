@@ -39,48 +39,46 @@ function openWin10() {
 
 
 
-//{ // element.addEventListener("click", myFunction);
 
-//<//form> function myFunction() { */}
-//{/* //   alert ("Hello World!");
-// }
-// function startNow() { */}
-///* //   var questionBoxZero= document.getElementById("questionBoxZero");
-//   console.log(questionBoxZero) */}
+//TO DO Build Timer Function
 
 
-
-//   element.addEventListener("click", myFunction);
-
-// function myFunction() {
-//   alert ("Hello World!");
-// }
-// };
-
-// var startNow = document.getElementById("startButton").onclick; 
-// console.log(startNow)
-
-//get value of buttons
-// var raquestionzero = document.getElementById("buttonC");
-// console.log(raquestionzero)
-
-// var raquestionone = document.getElementById("buttonF");
-// console.log(raquestionone) 
-
-
-//var rightAnswer0 = [questionzero, ]
-//var wrongAnswer = new Array(): might not need this 
+//Timer starts when button is clicked 
 
 
 
 
 
+//To Do Deal With Questions
 
 
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
 
+  // Get today's date and time
+  var now = new Date().getTime();
 
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
+  // Time calculations for days, hours, minutes and seconds
+  //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "GAME OVER!!!!";
+  }
+}, 1000);
 
 
 
@@ -89,13 +87,12 @@ function openWin10() {
 
 
 
-//<ol id="demo">
-  //  <h2>64/8 = ?</h2><br>
-    //<li>a. </li>
- //   <li>b. </li>
-   // <li>c. 8</li>
-   // <li>d.</li>
-//</ol>
+
+
+
+
+
+
 
 
 
