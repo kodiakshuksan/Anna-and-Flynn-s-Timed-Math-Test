@@ -1,57 +1,126 @@
 //JavaScript Timed Math Test//
+console.log("hello wild")
+
 
 //Click start button to start timed test//
-//"start" button//
-function openWin() {
+//"start" button makes questions pop up //
+const questionBox0 = () => {
   window.open("index1.html");
+  console.log("hello")
 };
-function openWin1() {
+const questionBox1 = () => {
   window.open("index2.html");
 };
 
-function openWin2() {
+const questionBox2 = () => {
   window.open("index3.html");
 };
-function openWin3() {
+const questionBox3 = () => {
   window.open("index4.html");
 };
-function openWin4() {
+const questionBox4 = () => {
   window.open("index5.html");
 };
-function openWin5() {
+const questionBox5 = () => {
   window.open("index6.html");
 };
-function openWin6() {
+const questionBox6 = () => {
   window.open("index7.html");
 };
-function openWin7() {
+const questionBox7 = () => {
   window.open("index8.html");
 };
-function openWin8() {
+const questionBox8 = () => {
   window.open("index9.html");
 };
-function openWin9() {
+const questionBox9 = () => {
   window.open("index10.html");
 };
-function openWin10() {
-  window.open("index8.html");
+const questionBox10 = () => {
+  window.open("index2.html");
+};
+const questionBox11 = () => {
+  window.open("index3.html");
 };
 
 
 
 
-//TO DO Build Timer Function
+//If start button is clicked the timer will start and a division question will appear//
+//Where and how will question loop run
+//Questions
+const problems = [questionBox1, questionBox2, questionBox3, questionBox4, questionBox5, questionBox6, questionBox7, questionBox8, questionBox9, questionBox10, questionBox11]
+
+//if userAnswer chooses a variable in the [array of right answers]
+const rightAnswers = [
+  {questionBox0: "d",
+  questionBox1: "c", 
+  questionBox2: "a", 
+  questionBox3: "d", 
+  questionBox4: "d", 
+  questionBox5: "c", 
+  questionBox6: "d", 
+  questionBox7: "b", 
+  questionBox8: "c", 
+  questionBox9: "a", 
+  questionBox10: "a",
+  questionBox10: "d"
+}
+];
+console.log(problems[1])
+console.log(rightAnswers[2])
+//Question #1, c
+//Question #2, a
+//Question #3, d
+//Question #4, d
+//Question #5, c
+//Question #6, d
+//Question #7, b
+//Question #8, c
+//Question #9, d
+//Question #10, a  ]
 
 
-//Timer starts when button is clicked 
+//var wrongAnswer = [array of the wrong answers
+//Question #1, abd
+//Question #2, bcd
+//Question #3, abc
+//Question #4, abc
+//Question #5, abd
+//Question #6, abc
+//Question #7, acd
+//Question #8, abd
+//Quesiton #9, abc
+//Question #10, bcd ]
+
+//Displays questions
+//while user is answering one question the rest are hidden
+const showQuestion = () => {
+
+}
+
+//When a correct answer is chosen
+//if (questionbox1 === c) {
+  //display next question
+  //score = 1
+//}
+
+//When an incorrect answer is chosen
+//if (answer = !userChoice) {
+  //go to next question
+  // subtract 2 seconds from the time clock
+  //wrong answer = timer decrement
+//}
+
+
+
+//Game Over
+//if all questions are answered or if the timer reaches 0 the game is over
 
 
 
 
-
-//To Do Deal With Questions
-
-
+//Timer
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
@@ -64,11 +133,8 @@ var x = setInterval(function() {
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  //var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  var seconds = Math.floor((distance % (1000 * 20)) / 1000);
 
   // Display the result in the element with id="demo"
   document.getElementById("demo").innerHTML = seconds + "s ";
@@ -104,15 +170,9 @@ var x = setInterval(function() {
 
 
 
-//handler//
-//event Listener//
-
-//Timer starts//
-//Timer starts when button is clicked 
 
 
-//if start button is clicked then timer starts
-// Selects element by class
+
 //var timeEl = document.querySelector(".time");
 
 // Selects element by id
@@ -173,37 +233,6 @@ var x = setInterval(function() {
 //setTime();
 
 
-//If start button is clicked the timer will start and a division question will appear//
-//Where and how will question loop run
-//Question loop
-
-//if userAnswer chooses a variable in the [array of right answers]
-//then var question++
-
-//var rightAnswer = [array of the right answers 
-//Question #1, c
-//Question #2, a
-//Question #3, d
-//Question #4, d
-//Question #5, c
-//Question #6, d
-//Question #7, b
-//Question #8, c
-//Quesiton #9, d
-//Question #10, a  ]
-
-
-//var wrongAnswer = [array of the wrong answers
-//Question #1, abd
-//Question #2, bcd
-//Question #3, abc
-//Question #4, abc
-//Question #5, abd
-//Question #6, abc
-//Question #7, acd
-//Question #8, abd
-//Quesiton #9, abc
-//Question #10, bcd ]
 
 
 
@@ -213,24 +242,60 @@ var x = setInterval(function() {
 
 
 
-//If answer to Question #1 is incorrect the time is subtracted from the timer//
-// wrong answer = timer decrement
 
-//if answer is right a point is added to the players score
 
-//if all questions are answered or if the timer reaches 0 the game is over
 
 //When game is over 
 
 //I can save my initials and my score//
+
+
 
 //fill in initials and submit button
 //event listener/handler
 
 //Where does user see other scores compared to theirs?
 
+
+
 //game resets and starts over//
 //if button is clicked then game resets and returns to starting screen
 
+
+//Timer and Timer Over example Code
+// Selects element by class
+// var timeEl = document.querySelector(".time");
+
+// // Selects element by id
+// var mainEl = document.getElementById("main");
+
+// var secondsLeft = 10;
+
+// function setTime() {
+//   // Sets interval in variable
+//   var timerInterval = setInterval(function() {
+//     secondsLeft--;
+//     timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+
+//     if(secondsLeft === 0) {
+//       // Stops execution of action at set interval
+//       clearInterval(timerInterval);
+//       // Calls function to create and append image
+//       sendMessage();
+//     }
+
+//   }, 1000);
+// }
+
+// Function to create and append colorsplosion image
+// function sendMessage() {
+//   timeEl.textContent = " ";
+//   var imgEl = document.createElement("img");
+//   imgEl.setAttribute("src", "images/image_1.jpg");
+//   mainEl.appendChild(imgEl);
+
+// }
+
+// setTime();
 
 

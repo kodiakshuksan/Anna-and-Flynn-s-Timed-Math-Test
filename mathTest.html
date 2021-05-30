@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Test</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+    <!--Start Button-->
+    <button id="startButton" onclick="askMe()">Start</button>
+    <div id="demoTimer"></div> 
+    
+    <h2 id="countdown"></h1>
+    <h3 id="main"></h2>
+    <h2 id="endGame"></h1>
+            
+    
+    
+    <!--USE ID TO DISPLAY QUESTION-->
+    <p id="demoG"></p>
+    <p id="demoF"></p>
+    <p id="demoEnd"></p>
+    <p id="demoI"></p>
+    <p id="demoH"></p>
+    <p id="demoJ"></p>
+    <p id="demoK"></p>
+    <p id="demoL"></p>
+    <p id="demoM"></p>
+    <p id="demoN"></p>
+    <p id="demoO"></p>
+    <p id="demoP"></p>
+    
+    
+
+
+
+
+    <!--Questions-->
+    <div id="questionBox1"  style="visibility:hidden;" class="list-group questionBoxA">
+        <div class="list-group-item list-group-item-action active">
+        <h3> 64/8 = ?</h3>
+        </div>
+        <button type="button" id="button1A" class="list-group-item list-group-item-action">A.  20</button>
+        <button type="button" id="button1B" class="list-group-item list-group-item-action">B.  2</button>
+        <button type="button" id="button1C" onclick="changeQuestion1()" class="list-group-item list-group-item-action" >C.  8</button>
+        <button type="button" id="button1D"  class="list-group-item list-group-item-action">D.  6</button>
+        <p id="demo"></p>
+    </div>
+
+    <!--Questions-->
+    <div id="questionBox2" style="visibility:hidden;" class="list-group">
+        <div class="list-group-item list-group-item-action active">
+        <h3>  7/7 = ?</h3>
+        </div>
+        <button type="button" id="button2A" class="list-group-item list-group-item-action">A. 0</button>
+        <button type="button" id="button2B" onclick="changeQuestion2()" class="list-group-item list-group-item-action">B. 1</button>
+        <button type="button" id="button2C" class="list-group-item list-group-item-action">C. 11</button>
+        <button type="button" id="button2D" class="list-group-item list-group-item-action">D. 5</button>
+        <p id="demo2"></p>
+    </div>
+
+    <div id="questionBox3" style="visibility:hidden;" class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active">
+        <h3> 18/2 = ?</h3>
+        </button>
+        <button type="button"  id="button3A" class="list-group-item list-group-item-action">A. 26</button>
+        <button type="button"  id="button3B" class="list-group-item list-group-item-action">B. 17</button>
+        <button type="button"  id="button3C" class="list-group-item list-group-item-action">C.  4</button>
+        <button type="button"  id="button3D" class="list-group-item list-group-item-action" onclick="changeQuestion3()">D.  9</button>
+      </div>
+
+      <div id="questionBox4" style="visibility:hidden;" class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active">
+        <h3> 21/3= ?</h3>
+        </button>
+        <button type="button" id="button4A" class="list-group-item list-group-item-action">A. 2</button>
+        <button type="button" id="button4B" class="list-group-item list-group-item-action" onclick="changeQuestion4()">B. 7</button>
+        <button type="button" id="button4C" class="list-group-item list-group-item-action">C.  13</button>
+        <button type="button" id="button4D" class="list-group-item list-group-item-action">D.  2</button>
+      </div>
+      <p id="demo3"></p>
+
+
+      <div id="questionBox5" style="visibility:hidden;" class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+    <h3> 45/9= ?</h3>
+    </button>
+    <button type="button" id="button5A"class="list-group-item list-group-item-action">A. 4</button>
+    <button type="button" id="button5B"  class="list-group-item list-group-item-action">B. 9</button>
+    <button type="button" id="button5C" class="list-group-item list-group-item-action">C.  18</button>
+    <button type="button" id="button5D" class="list-group-item list-group-item-action" onclick="changeQuestion5()">D.  5</button>
+  </div>
+ 
+
+  <p id="demo4"></p>
+
+  <div id="questionBox6" style="visibility:hidden;" class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+    <h3> 48/6 = ?</h3>
+    </button>
+    <button type="button" id="button6A" class="list-group-item list-group-item-action">A. 6</button>
+    <button type="button" id="button6B" class="list-group-item list-group-item-action" onclick="changeQuestion6()">B. 8</button>
+    <button type="button" id="button6C" class="list-group-item list-group-item-action">C.  14</button>
+    <button type="button" id="button6D" class="list-group-item list-group-item-action">D.  4</button>
+  </div>
+  <p id="demo"></p>
+
+  <div id="questionBox7" style="visibility:hidden;" class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+    <h3> 27/9 = ?</h3>
+    </button>
+    <button type="button" id="button7A" class="list-group-item list-group-item-action" onclick="changeQuestion7()">A. 3</button>
+    <button type="button" id="button7B" class="list-group-item list-group-item-action">B. 8</button>
+    <button type="button" id="button7C" class="list-group-item list-group-item-action">C.  14</button>
+    <button type="button" id="button7D" class="list-group-item list-group-item-action">D.  4</button>
+  </div>
+
+  <p id="demo"></p>
+
+
+  <div id="questionBox8" style="visibility:hidden;" class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+    <h3> 36/6 = ?</h3>
+    </button>
+    <button type="button" id="button8A" class="list-group-item list-group-item-action">A. 9</button>
+    <button type="button" id="button8B" class="list-group-item list-group-item-action">B. 13</button>
+    <button type="button" id="button8C" class="list-group-item list-group-item-action" onclick="changeQuestion8()">C.  6</button>
+    <button type="button" id="button8D" class="list-group-item list-group-item-action">D.  16</button>
+  </div>
+
+  <p id="demo"></p>
+
+ <div id="questionBox9" style="visibility:hidden;" class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+    <h3> 54/9 = ?</h3>
+    </button>
+    <button type="button" id="button9A" class="list-group-item list-group-item-action">A. 4</button>
+    <button type="button" id="button9B" class="list-group-item list-group-item-action" onclick="changeQuestion9()">B. 7</button>
+    <button type="button" id="button9C" class="list-group-item list-group-item-action">C.  8</button>
+    <button type="button" id="button9D" class="list-group-item list-group-item-action">D.  14</button>
+  </div>
+
+  <p id="demo"></p>
+
+
+
+ <div id="questionBox10" style="visibility:hidden;" class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+    <h3> 72/8 = ?</h3>
+    </button>
+    <button type="button" id="button10A" class="list-group-item list-group-item-action" onclick="changeQuestion10()">A. 9</button>
+    <button type="button" id="button10B" class="list-group-item list-group-item-action">B. 31.5</button>
+    <button type="button" id="button10C" class="list-group-item list-group-item-action">C.  12</button>
+    <button type="button" id="button10D" class="list-group-item list-group-item-action">D.  22</button>
+  </div>
+
+
+  <p id="demo"></p>
+
+  <div id="questionBox11" style="visibility:hidden;" class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+    <h3> 80/10 = ?</h3>
+    </button>
+    <button type="button" id="button11A" class="list-group-item list-group-item-action" onclick="endGame()">A. 8</button>
+    <button type="button" id="button11B" class="list-group-item list-group-item-action">B. 4</button>
+    <button type="button" id="button11C" class="list-group-item list-group-item-action">C.  18</button>
+    <button type="button" id="button11D" class="list-group-item list-group-item-action">D.  40</button>
+  </div>
+
+  <p id="demo"></p>
+  
+
+
+    
+
+
+
+    <!--p id="myP1">This is some text.</p>
+    <p id="myP2">This is some text.</p>
+    
+    <input type="button" onclick="demoDisplay()" value="Hide text with display property">
+    <input type="button" onclick="demoVisibility()" value="Hide text with visibility property"-->
+    <!--button onclick="askQuestion1()">Try it</button-->
+
+    
+
+
+<script src="./mathTest.js"></script>  
+</body>
+</html>
