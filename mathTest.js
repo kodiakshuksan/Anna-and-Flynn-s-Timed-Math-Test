@@ -4,45 +4,95 @@ console.log("hello wild!")
 
  
 //TO DO: MAKE TIMER
+// const count = (function() {
+//     let num = 20
+//     return ( function() {return num-- })
+// }) ()
+
+// function countDown() 
+// {
+//     const clock = document.getElementById("clock")
+//     let timerId = null
+//     let num = count()
+//     if (num > 0)
+//     {
+//         clock.innerHTML += '<span>' + num + '</span>'
+//         timerId = window.setTimeout(countDown, 1000)
+//     }
+//         else
+//         {
+//             clock.innerHTML += '<span>Game Over!</span>'
+//             window.clearTimeout( timeId)
+//         }
+//         window.clearTimeout( timerId)
+        
+//  }
+
+var secondsLeft = 20;
+
+function countDown() {
+  var clock = document.getElementById("clock");
+
+  timerInterval = setInterval(function() {
+      secondsLeft--;
+      clock.textContent = "Time: " + secondsLeft;
+
+      if(secondsLeft === 0){
+          clearInterval(timerInterval);
+          // If seconds is 0, stop quiz
+          stopClock();
+          document.getElementById("clock").innerHTML = Too Slow!!! Game Over Little Flynnie and Anna Bear!!! I love You!
+      }
+  }, 1000)
+}
+
+
+
+
+
 // const timerEl = document.getElementById('countdown');
 // const mainEl = document.getElementById('main');
 
-// const message = 'Game Over!';
+const message = 'Game Over!';
 
 
-// // Timer that counts down from 20
+// Timer that counts down from 20
 // function countdown() {
 //   const timeLeft = 20;
 
-//   // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+//   //Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
 //   const timeInterval = setInterval(function () {
-//     // As long as the `timeLeft` is greater than 1
+//     //As long as the `timeLeft` is greater than 1
 //     if (timeLeft > 1) {
 //       // Set the `textContent` of `timerEl` to show the remaining seconds
 //       timerEl.textContent = timeLeft + ' seconds remaining';
-//       // Decrement `timeLeft` by 1
-//       timeLeft--;
+      // Decrement `timeLeft` by 1
+//       timeLeft-- ;
 //     } else if (timeLeft === 1) {
 //       // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
 //       timerEl.textContent = timeLeft + ' second remaining';
-//       timeLeft--;
+//       timeLeft-- ;
 //     } else {
 //       // Once `timeLeft` gets to 0, set `timerEl` to an empty string
 //       timerEl.textContent = '';
 //       // Use `clearInterval()` to stop the timer
-//       clearInterval(timeInterval);
+//     clearInterval(timeInterval);
 //       // Call the `displayMessage()` function
-//       displayMessage();
+//       document.getElementById("main").innerHTML = message;
 //     }
 //   }, 2000);
 // }
-// countdown()
+
 
 //TO DO: START GAME
 //TO DO: CREATE START BUTTON THAT STARTS QUESTIONS AND TIMER
 const askMe = () => {
+
+        
         //TO DO: MAKE QUESTION SHOW UP WHEN THE START BUTTON IS CLICKED
         document.getElementById("questionBox1").style.visibility = "visible";
+        countDown();
+
         // const button1c = document.getElementById("button1c");
         // const onChange = button1c;
 
@@ -52,9 +102,9 @@ const askMe = () => {
     }
  
 //TO DO: ADD START BUTTON
+//startButton.addEventListener("clicked", askMe);
+//startButton.addEventListener("clicked", x);
 startButton.addEventListener("clicked", askMe);
-startButton.addEventListener("clicked", countdown);
-
 // const askMe1 = () => {
 //     const button1c = document.getElementById("button1c");
         
@@ -65,19 +115,23 @@ startButton.addEventListener("clicked", countdown);
 // }
 // }
 
-
+//Gets Right Answer Responses
 //GETS QUESTION #1
-const button1c = document.getElementById("button1c");
+const button1C = document.getElementById("button1c");
 const getQuestion2 = document.getElementById("questionBox2");
+const button1A = document.getElementById("button1A");
+const button1B = document.getElementById("button1B");
+const button1D = document.getElementById("button1D");
+
 
 function changeQuestion1() {
-    //getQuestion2.stopPropagation();
+    //stopPropagation();
     document.getElementById("questionBox1").style.visibility = "hidden";
    document.getElementById("questionBox2").style.visibility = "visible";
    //document.getElementById("demo1").innerHTML = questionBox2;
  }
 
- button1c.addEventListener("click", changeQuestion1);
+ button1C.addEventListener("click", changeQuestion1);
 
 
 //GETS QUESTION #2
@@ -85,7 +139,7 @@ const button2B = document.getElementById("button2B");
 const getQuestion3 = document.getElementById("questionBox3");
 
 function changeQuestion2() {
-    //getQuestion2.stopPropagation();
+    //stopPropagation();
     document.getElementById("questionBox2").style.visibility = "hidden";
     document.getElementById("questionBox3").style.visibility = "visible";
     //document.getElementById("demo2").innerHTML = questionBox3;
@@ -211,6 +265,8 @@ function endGame() {
 
 button11A.addEventListener("click", endGame);
 
+//Wrong Answer Responses
+
 
 //TO DO: RESTART FUNCTION
 
@@ -232,32 +288,32 @@ console.log(questionBox1)
 // }
 
 // console.log(questionBoxes)
-// //TO DO: MAKE TIMER
-// // Set the date we're counting down to
-// var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+//TO DO: MAKE TIMER
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
-// // Update the count down every 1 second
-// var x = setInterval(function() {
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-//   // Get today's date and time
-//   var now = new Date().getTime();
+  // Get today's date and time
+  var now = new Date().getTime();
 
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
+  //Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
   
-//   var seconds = Math.floor((distance % (1000 * 20)) / 1000);
+  var seconds = Math.floor((distance % (1000 * 20)) / 1000);
 
-//   // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = seconds + "s ";
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = seconds + "s ";
 
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("demo").innerHTML = "GAME OVER!!!!";
-//   }
-// }, 1000);
-
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "GAME OVER!!!!";
+  }
+}, 1000);
+x()
 
 
 
@@ -324,6 +380,8 @@ console.log(questionBox1)
 // THEN a timer starts and I am presented with a question
 // WHEN I answer a question
 // THEN I am presented with another question
+// WHEN all questions are answer game is over
+
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 // WHEN all questions are answered or the timer reaches 0
