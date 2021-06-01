@@ -37,11 +37,10 @@ function countDown() {
       secondsLeft--;
       clock.textContent = "Time: " + secondsLeft;
 
-      if(secondsLeft === 0){
+      if(secondsLeft === 0) {
           clearInterval(timerInterval);
           // If seconds is 0, stop quiz
           stopClock();
-          document.getElementById("clock").innerHTML = Too Slow!!! Game Over Little Flynnie and Anna Bear!!! I love You!
       }
   }, 1000)
 }
